@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/contact.css"/>
+<title>CONTACT</title>
+</head>
+<body>
+<div class = "bg">
+	
+	<div class="bg_sub">
+		
+		<img src="images/sub_main4.jpg" alt="main">
+			
+		
+	</div>
+	
+	
+	<div class="upper_header">
+		<div class ="upper_header1">
+			<p>NUMBER: 0730031881</p>
+		</div>
+		<div class ="upper_header2">
+			<p>EMAIL: madtongsan@gmail.com</p>
+		</div>
+		<div class ="upper_header3">
+			<p>OPENING HOURS: MON-SAT 11:00AM - 10:00PM</p>
+		</div>
+		
+	</div>
+	<div class="header">
+		
+		<div class = "logo" >
+		
+			<h1>MADTONGSAN</h1>
+			
+		</div>
+		<div class = "menu">
+			<ul>
+				<li><a href ="index.html">Home</a></li>
+				<li><a href ="about.html">About</a></li>
+				<li><a href ="menu.html">Menu</a></li>
+				<li><a href ="contact.html">Contact</a></li>		
+			</ul>
+		</div>
+		<nav role="navigation">
+		  	<div id="menuToggle">
+		  		<input type="checkbox"/>
+					<span></span>
+	    			<span></span>
+	    			<span></span>
+	    		<ul id="menu">
+				    <li><a href="index.html">Home</a></li>
+				    <li><a href="about.html">About</a></li>
+				    <li><a href="menu.html">Menu</a></li>
+				    <li><a href="contact.html">Contact</a></li>
+				</ul>
+	  		</div>
+  		</nav>
+	</div>
+	<div class ="text">
+	
+		<h1>CONTACT</h1>
+		<p>HOME > CONTACT ></p>
+	</div>
+</div>
+
+<div class ="contact_body">
+	<div class ="contact_form">
+	
+		<h2>EMAIL US</h2>
+
+		<div class="container">
+	  		<form action="/action_page.php">
+		    	<label for="name">NAME</label>
+		    	<input type="text" id="name" name="name" placeholder="Your name">	
+		
+				<label for="email">EMAIL</label>
+				<input type="text" id="email" name="email" placeholder="Your Email Address">
+		
+				<label for="subject">MESSAGE</label>
+				<textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
+		
+				<input type="submit" value="SEND MESSAGE">
+	  		</form>
+		</div>
+	
+	</div>
+	
+	<div class ="google_map" id="googleMap">
+	
+	</div>
+	
+
+</div>
+<div class ="contact_body2">
+	<div>
+		<h2>VISIT US</h2>
+	</div>
+	<div class ="contact_info">
+		<div class = "info_detail">
+			<i class="fa fa-map-marker" style="font-size:24px"></i>
+			<h3>Address</h3>
+		</div>
+		<p>Level 1, 85 Elizabeth Street Bribsnae CBD</p>
+	</div>
+	<div class ="contact_info">
+		<div class = "info_detail">
+			<i class="fa fa-phone" style="font-size:24px"></i>
+			<h3>Phone</h3>
+		</div>
+		<p>0730031881</p>
+	</div>
+	<div class ="contact_info">
+		<div class = "info_detail">
+			<i class="fa fa-envelope" style="font-size:24px"></i>	
+			<h3>Email</h3>
+		</div>
+		<p>madtongsan@gmail.com</p>
+	</div>
+	
+
+</div>
+
+<div class ="footer">
+
+	<div class ="footer_content">
+		<h4>MADTONGSAN</h4>
+	</div>
+	<div class ="footer_content">		
+	</div>
+	<div class ="footer_content">
+		<h4>LEVEL 1
+		<br>85 Elizabet street
+		<br>Brisbane CBD, 4000</h4>
+	</div>
+	<div class ="footer_content">
+		<h4>(07)30031881
+		<br>madtongsan@gmail.com
+		<br>
+		<br>FOLLOW US</h4>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-google"></a>
+	</div>
+
+
+</div>
+<script>
+
+
+
+function initMap() {
+	  // The location of Uluru
+	  const madtongsan = { lat: -27.471125360081984, lng: 153.02526298733775 };
+	  // The map, centered at Uluru
+	  const map = new google.maps.Map(document.getElementById("googleMap"), {
+	    zoom: 16,
+	    center: madtongsan,
+	  });
+	  // The marker, positioned at Uluru
+	  const marker = new google.maps.Marker({
+	    position: madtongsan,
+	    map: map,
+	    title: "Madtongsan2"
+	  });
+	}
+</script>
+
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOcX5TF-331FUahNcmZ1bua1SLsODMH7U&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/menu.css"/>
+<title>MENU</title>
+</head>
+<style>
+
+</style>
+<body>
+<div class = "bg">
+	
+	<div class="bg_sub">
+		
+		<img src="images/sub_main3.jpg" alt="main">
+			
+		
+	</div>
+	
+	
+	<div class="upper_header">
+		<div class ="upper_header1">
+			<p>NUMBER: 0730031881</p>
+		</div>
+		<div class ="upper_header2">
+			<p>EMAIL: madtongsan@gmail.com</p>
+		</div>
+		<div class ="upper_header3">
+			<p>OPENING HOURS: MON-SAT 11:00AM - 10:00PM</p>
+		</div>
+		
+	</div>
+	<div class="header">
+		
+		<div class = "logo" >
+		
+			<h1>MADTONGSAN</h1>
+			
+		</div>
+		<div class = "menu">
+			<ul>
+				<li><a href ="index.html">Home</a></li>
+				<li><a href ="about.html">About</a></li>
+				<li><a href ="menu.html">Menu</a></li>
+				<li><a href ="contact.html">Contact</a></li>		
+			</ul>
+		</div>
+		<nav role="navigation">
+		  	<div id="menuToggle">
+		  		<input type="checkbox"/>
+					<span></span>
+	    			<span></span>
+	    			<span></span>
+	    		<ul id="menu">
+				    <li><a href="index.html">Home</a></li>
+				    <li><a href="about.html">About</a></li>
+				    <li><a href="menu.html">Menu</a></li>
+				    <li><a href="contact.html">Contact</a></li>
+				</ul>
+	  		</div>
+  		</nav>
+	</div>
+	<div class ="text">
+	
+		<h1>MENU</h1>
+		<p>HOME > MENU ></p>
+	</div>
+</div>
+<div class= "menu_content">
+	<div class = "menu_button">
+		<button class = "tablink" onclick="openPage('entree')" id="defaultOpen">ENTREE</button>
+		<button class = "tablink" onclick="openPage('bibimbap')">BIBIMBAP</button>
+		<button class = "tablink" onclick="openPage('ricedishes')">RICE DISHES</button>
+		<button class = "tablink" onclick="openPage('hotpotsoup')">HOTPOT SOUP</button>
+		<button class = "tablink" onclick="openPage('grilledfish')">GRILEED FISH</button>
+		<button class = "tablink" onclick="openPage('noodles')">NOODLES</button>
+		<button class = "tablink" onclick="openPage('steamboat')">STEAM BOAT</button>
+		<button class = "tablink" onclick="openPage('sizzling')">SIZZLING</button>
+		
+		
+		
+		<div id="entree" class="tabcontent">
+  			<div class = "menu_item">
+  				<img src = "images/entree1.jpg" alt ="entree1">
+  				<h2>A1. Garden Salad <br>간장야채샐러드</h2>
+  				<hr>
+  				<p>Fresh garden salad with a light soy sauce dressing</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/entree2.jpg" alt ="entree2">
+  				<h2>A2. Oriental Silken Tofu<br>오리엔탈 생두부</h2>
+  				<hr>
+  				<p>Fresh tofu with an oriental dressing and garnished with fish roe</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/entree4.jpg" alt ="entree4">
+  				<h2>A6. Man Du<br>튀김만두</h2>
+  				<hr>
+  				<p>Deep fried vegetable dumplings(6pcs)</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/entree3.jpg" alt ="entree3">
+  				<h2>A8. Deep Fried Rice Cakes<br>떡꼬치</h2>
+  				<hr>
+  				<p>Deep fried rice cakes in a sweet and spicy sauce</p>	
+  			</div>
+  			
+		</div>
+
+		<div id="bibimbap" class="tabcontent">
+			<div class = "menu_item">
+  				<img src = "images/bibimbap1.jpg" alt ="bibimbap1">
+  				<h2>Bibimbap with Beef/Chicken in Stone Hot Pot<br>돌솥비빔밥</h2>
+  				<hr>
+  				<p>Rice, seasoned vegetables with choice of beef/chicken 
+  				topped with a raw egg served in a stone hot pot with spicy sauce</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/bibimbap2.jpg" alt ="bibimbap2">
+  				<h2>Raw Beef Bibimbap in Stone Hot Pot<br>돌솥육회</h2>
+  				<hr>
+  				<p>Rice, seasoned vegetables with marinated raw beef, 
+  				topped with a raw egg served in a stone hot pot with spicy sauce</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/bibimbap3.jpg" alt ="bibimbap3">
+  				<h2>Marinated Beef with Rice in Stone Hot Pot<br>돌솥불고기</h2>
+  				<hr>
+  				<p>Rice, seasoned vegetables and marinated beef served in a stone hot pot(non-spicy)</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/bibimbap4.jpg" alt ="bibimbap4">
+  				<h2>Spicy Pork with Rice in Stone Hot Pot <br>돌솥제육</h2>
+  				<hr>
+  				<p>Rice, seasoned vegetables and marinated pork served in a stone hot pot</p>	
+  			</div>
+		</div>
+
+		<div id="ricedishes" class="tabcontent">
+			<div class = "menu_item">
+  				<img src = "images/ricedishes1.jpg" alt ="ricedishes1">
+  				<h2>Stir Fried Marinated Beef<br>불고기덮밥</h2>
+  				<hr>
+  				<p>Stir fried marinated beef and vegetables</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/ricedishes2.jpg" alt ="ricedishes2">
+  				<h2>Stir Fried Marinated Pork<br>제육구이덮밥</h2>
+  				<hr>
+  				<p>Stir fried marinated pork and vegetables</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/ricedishes3.jpg" alt ="ricedishes3">
+  				<h2>Kimchi and Pork Fried Rice<br>김치볶음밥</h2>
+  				<hr>
+  				<p>Kimchi and minced pork fried rice</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/ricedishes4.jpg" alt ="ricedishes4">
+  				<h2>Pan-Fried Tofu<br>두부조림덮밥</h2>
+  				<hr>
+  				<p>Lightly pan fried tofu with oriental sauce</p>	
+  			</div>
+		</div>
+
+		<div id="hotpotsoup" class="tabcontent">
+			<div class = "menu_item">
+  				<img src = "images/hotpotsoup2.jpg" alt ="hotpotsoup2">
+  				<h2>Spicy Soft Tofu Soup<br>순두부찌개</h2>
+  				<hr>
+  				<p>Spicy soft tofu with seafood/pork and vegetables soup with a raaw egg</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/hotpotsoup1.jpg" alt ="hotpotsoup1">
+  				<h2>Soybean Paste Soup<br>된장찌개</h2>
+  				<hr>
+  				<p>Traditional vegetables Miso soup</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/hotpotsoup3.jpg" alt ="hotpotsoup3">
+  				<h2>Clear Beef Rib Soup<br>갈비탕</h2>
+  				<hr>
+  				<p>Clear beef rib soup with egg, radish clear noodles and rice</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/hotpotsoup4.jpg" alt ="hotpotsoup4">
+  				<h2>Beef Rib Stew<br>갈비찜</h2>
+  				<hr>
+  				<p>Beef ribs stew with potato, mushroom and carrot</p>	
+  			</div>
+		</div>
+		
+		<div id="grilledfish" class="tabcontent">
+			<div class = "menu_item">
+  				<img src = "images/grilledfish1.jpg" alt ="grilledfish1">
+  				<h2>Pan-Grilled Mackerel<br>고등어구이</h2>
+  				<hr>
+  				<p>Pan-grilled mackerel served with soy sauce</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/grilledfish2.jpg" alt ="grilledfish2">
+  				<h2>Pan-Grilled Spanish Mackerel<br>삼치구이</h2>
+  				<hr>
+  				<p>Pan-grilled spanish mackerel served with soy sauce</p>	
+  			</div>
+		</div>
+		
+		<div id="noodles" class="tabcontent">
+			<div class = "menu_item">
+  				<img src = "images/noodles1.jpg" alt ="noodles1">
+  				<h2>Spicy Seafood Udon Soup<br>짬뽕</h2>
+  				<hr>
+  				<p>Spicy seafood udon noodle soup</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/noodles4.jpg" alt ="noodles4">
+  				<h2>Spicy Stir Fried Seafood Udo<br>볶음짬뽕</h2>
+  				<hr>
+  				<p>Stir fried seafood, vegetables and udon noodles in spicy sauce</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/noodles2.jpg" alt ="noodles2">
+  				<h2>Ramen and Dumplings Set<br>라면만두세트</h2>
+  				<hr>
+  				<p>Spicy ramen noodle soup topped with an egg and served with fried dumplings</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/noodles3.jpg" alt ="noodles3">
+  				<h2>Cold Noodle Soup<br>냉국수</h2>
+  				<hr>
+  				<p>Thin noodles in a cool, clear stock topped with sliced pork</p>	
+  			</div>
+		</div>
+		
+		<div id="steamboat" class="tabcontent">
+			<div class = "menu_item">
+  				<img src = "images/steamboat1.jpg" alt ="steamboat1">
+  				<h2>Army Base Stew<br>부대전골</h2>
+  				<hr>
+  				<p>Spicy sausage, pork belly, Kimchi, vegetables and ramen noodle combination soup</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/steamboat2.jpg" alt ="steamboat2">
+  				<h2>Beef Rib Stew in Steam Boat<br>갈비찜</h2>
+  				<hr>
+  				<p>Spicy/Non-spicy stewed beef ribs and vegetables</p>	
+  			</div>
+		</div>
+		
+		<div id="sizzling" class="tabcontent">
+			<div class = "menu_item">
+  				<img src = "images/sizzling1.jpg" alt ="sizzling2">
+  				<h2>Sizzling Spicy Pork<br>제육볶음</h2>
+  				<hr>
+  				<p>Spicy pork, kimchi and vegetables</p>	
+  			</div>
+  			<div class = "menu_item">
+  				<img src = "images/sizzling2.jpg" alt ="sizzling2">
+  				<h2>Sizzling Spicy Squid<br>오징어볶음</h2>
+  				<hr>
+  				<p>Spicy squid and vegetables</p>	
+  			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div class ="footer">
+
+	<div class ="footer_content">
+		<h4>MADTONGSAN</h4>
+	</div>
+	<div class ="footer_content">		
+	</div>
+	<div class ="footer_content">
+		<h4>LEVEL 1
+		<br>85 Elizabet street
+		<br>Brisbane CBD, 4000</h4>
+	</div>
+	<div class ="footer_content">
+		<h4>(07)30031881
+		<br>madtongsan@gmail.com
+		<br>
+		<br>FOLLOW US</h4>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-google"></a>
+	</div>
+
+
+</div>
+
+<script src ="javascript/menu.js"></script>
+
+</body>
+</html>

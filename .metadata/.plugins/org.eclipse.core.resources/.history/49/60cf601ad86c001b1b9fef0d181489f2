@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+html, body {
+
+	margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+.bg {
+	
+	height: 50%;
+    width: 100%;
+	z-index:1;
+	position: relative; 
+	top: 0px; 
+	left: 0px;	
+
+}
+
+.bg_sub {
+	
+	position: absolute;
+	height: 100%;
+    width: 100%;
+
+}
+
+
+.bg_sub img {
+	
+	object-fit: cover;
+	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	filter: brightness(50%);
+	
+
+}
+
+.upper_header {
+
+	width:100%;
+	position: absolute; 
+	z-index:2;
+	top: 0px; 
+	left: 0px;
+	height: 35px;
+	background-color:rgba(255,255,255,0.1);	
+  	
+
+}
+
+.upper_header1 {
+	
+	float: left;
+	width: 33%;
+	text-align:center;
+
+}
+
+.upper_header2 {
+	
+	width: 33%;
+	float: left;
+	text-align:center;
+}
+
+.upper_header3 {
+
+	width: 34%;
+	float: left;
+	text-align:center;
+}
+
+.upper_header p {
+	padding: 0;
+	margin: 0;
+	padding-top: 8px;
+	color: rgba(255,255,255,0.5);
+	font-size: 13px;
+	font-weight: bold;
+
+}
+
+.header {
+
+	border-bottom: solid thin rgba(255,255,255,0.25);
+	width: 99%;
+	margin-left: 0.5%;
+	z-index:2;
+	position: absolute; 
+	top: 35px; 
+	left: 0px;
+	height: 80px;
+	
+	
+
+}
+
+.logo {
+
+	width: 35%;
+	height: 100px;
+	float: left;
+	padding-left: 40px;
+	
+}
+
+.logo h1 {
+
+	color: rgba(255,255,255,0.8);
+	
+	
+}
+
+
+.menu {
+
+	width: 63%;
+	height: 100%;
+	float: right;
+    text-align: right;
+    width: auto;
+    padding-right: 50px;
+    
+    display: flex;
+  	justify-content: center;
+  	align-content: center;
+  	flex-direction: column;
+	
+
+}
+
+.menu ul {
+
+	list-style-type: none;
+
+}
+
+.menu li {
+
+	float:left;
+	padding-right: 30px;
+
+}
+
+.menu li a {
+
+	color: rgba(255,255,255,0.8);
+	text-decoration: none;
+}
+
+#menuToggle {
+
+	display: block;
+  	position: absolute;
+  	top: 33px;
+  	right: 25px;
+  
+ 	 z-index: 2;
+  
+ 	 -webkit-user-select: none;
+  	user-select: none;}
+
+#menuToggle a {
+
+	text-decoration: none;
+  	color: #232323;
+  
+  	transition: color 0.3s ease;
+
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #cdcdcd;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  height: 770px;
+  margin: 22px 0 0 0;
+  padding: 50px;
+  padding-top: 50px;
+  right: -200px;
+  
+  
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.text {
+	bottom: 0;
+	position: absolute;
+	z-index:2;
+	left: 50%;
+    transform: translate(-50%,-20%);
+    text-align: center;
+    
+}
+
+.text h1{
+	
+	color: rgba(255,255,255,0.85);
+	padding-left: 20px;
+	font-size: 45px;
+	animation: fade-in 2s infinite;
+	animation-iteration-count :1;
+}
+
+.text p{
+
+	color: rgba(255,255,255,0.85);
+	padding-left: 20px;
+	font-size: 14px;
+	animation: fade-in 2s infinite;
+	animation-iteration-count :1;
+}
+
+.contact_body {
+
+	width: 100%;
+	display: flex;
+ 	justify-content: center;
+ 	padding-top: 50px;
+ 	padding-bottom: 50px;
+	
+
+}
+
+.google_map {
+	
+	width: 40%;
+}
+
+.contact_form { 
+
+	width: 40%;
+
+}
+
+.contact_form h2 {
+
+	padding-left: 20px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.contact_body2 {
+	
+	
+	width: 75%;
+	height: 200px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	
+	
+
+}
+
+.contact_info {
+	
+	width: 33%;
+	float:left
+}
+
+.info_detail {
+
+	display: flex;
+  align-items: center;
+
+}
+
+.info_detail i {
+
+	padding-right: 10px;
+}
+
+.footer {
+
+	width: 100%;
+	height: 300px;
+	background-color: rgb(0,0,0,0.9);
+
+}
+
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+
+    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+}
+
+@media only screen and (min-width: 720px) {
+	
+	#menuToggle {
+	
+		display: none;
+	}
+	
+}
+
+@media only screen and (max-width: 720px) {
+	.header {
+		top: 0;
+		background-color: black;
+		width: 100%;
+		margin-left: 0%;
+	}
+	.upper_header {
+		visibility: hidden;
+	}
+	#menuToggle {
+	
+		display: block;
+	}
+
+	.menu {
+		display: none;
+	}
+    
+}
+
+@-webkit-keyframes fade-in {
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+}
+
+
+</style>
+</head>
+<body>
+<div class = "bg">
+	
+	<div class="bg_sub">
+		
+		<img src="images/sub_main4.jpg" alt="main">
+			
+		
+	</div>
+	
+	
+	<div class="upper_header">
+		<div class ="upper_header1">
+			<p>NUMBER: 0730031881</p>
+		</div>
+		<div class ="upper_header2">
+			<p>EMAIL: madtongsan@gmail.com</p>
+		</div>
+		<div class ="upper_header3">
+			<p>OPENING HOURS: MON-SAT 11:00AM - 10:00PM</p>
+		</div>
+		
+	</div>
+	<div class="header">
+		
+		<div class = "logo" >
+		
+			<h1>MADTONGSAN</h1>
+			
+		</div>
+		<div class = "menu">
+			<ul>
+				<li><a href ="index.html">Home</a></li>
+				<li><a href ="about.html">About</a></li>
+				<li><a href ="menu.html">Menu</a></li>
+				<li><a href ="contact.html">Contact</a></li>		
+			</ul>
+		</div>
+		<nav role="navigation">
+		  	<div id="menuToggle">
+		  		<input type="checkbox"/>
+					<span></span>
+	    			<span></span>
+	    			<span></span>
+	    		<ul id="menu">
+				    <li><a href="index.html">Home</a></li>
+				    <li><a href="about.html">About</a></li>
+				    <li><a href="menu.html">Menu</a></li>
+				    <li><a href="contact.html">Contact</a></li>
+				</ul>
+	  		</div>
+  		</nav>
+	</div>
+	<div class ="text">
+	
+		<h1>CONTACT</h1>
+		<p>HOME > CONTACT ></p>
+	</div>
+</div>
+
+<div class ="contact_body">
+	<div class ="contact_form">
+	
+		<h2>EMAIL US</h2>
+
+		<div class="container">
+	  		<form action="/action_page.php">
+		    	<label for="name">NAME</label>
+		    	<input type="text" id="name" name="name" placeholder="Your name">	
+		
+				<label for="email">EMAIL</label>
+				<input type="text" id="email" name="email" placeholder="Your Email Address">
+		
+				<label for="subject">MESSAGE</label>
+				<textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
+		
+				<input type="submit" value="SEND MESSAGE">
+	  		</form>
+		</div>
+	
+	</div>
+	
+	<div class ="google_map" id="googleMap">
+	
+	</div>
+	
+
+</div>
+<div class ="contact_body2">
+	<div>
+		<h2>VISIT US</h2>
+	</div>
+	<div class ="contact_info">
+		<div class = "info_detail">
+			<i class="fa fa-map-marker" style="font-size:24px"></i>
+			<h3>Address</h3>
+		</div>
+		<p>Level 1, 85 Elizabeth Street Bribsnae CBD</p>
+	</div>
+	<div class ="contact_info">
+		<div class = "info_detail">
+			<i class="fa fa-phone" style="font-size:24px"></i>
+			<h3>Phone</h3>
+		</div>
+		<p>0730031881</p>
+	</div>
+	<div class ="contact_info">
+		<div class = "info_detail">
+			<i class="fa fa-envelope" style="font-size:24px"></i>	
+			<h3>Email</h3>
+		</div>
+		<p>madtongsan@gmail.com</p>
+	</div>
+	
+
+</div>
+
+<div class ="footer">
+
+</div>
+
+<script>
+function initMap() {
+	  // The location of Uluru
+	  const madtongsan = { lat: -27.471125360081984, lng: 153.02526298733775 };
+	  // The map, centered at Uluru
+	  const map = new google.maps.Map(document.getElementById("googleMap"), {
+	    zoom: 16,
+	    center: madtongsan,
+	  });
+	  // The marker, positioned at Uluru
+	  const marker = new google.maps.Marker({
+	    position: madtongsan,
+	    map: map,
+	    title: "Madtongsan2"
+	  });
+	}
+</script>
+
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOcX5TF-331FUahNcmZ1bua1SLsODMH7U&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+</body>
+</html>

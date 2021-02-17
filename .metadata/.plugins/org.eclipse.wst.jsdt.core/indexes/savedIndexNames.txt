@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\Lenovo\Documents\GitHub\Project-2\Front-End\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2881218748.index
+2791724125.index
+1918552229.index
+1274847763.index
+2291061506.index
+1481973335.index
+1338462185.index
